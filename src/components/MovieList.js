@@ -5,6 +5,7 @@ const MovieList = (props) => {
     <div>
       {props.movies.map((movie, i) => (
         <div key={`${i}`}>
+          <p onClick={() => props.addFavorite(movie)}>Like</p>
           <h3>{movie.Title}</h3>
           <img src={movie.Poster} alt={`${movie.Title} poster`}></img>
         </div>
