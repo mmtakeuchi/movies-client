@@ -58,8 +58,8 @@ const App = () => {
   return (
     <div>
       <Container maxWidth="lg">
-        <p>Movies Found: {movies.length}</p>
         <Search query={query} setQuery={setQuery} />
+        <p>Movies Found: {movies.length}</p>
         <MovieList
           movies={movies}
           addFavorite={addFavorite}
