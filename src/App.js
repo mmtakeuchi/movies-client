@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faHeart, faCoffee } from "@fortawesome/free-solid-svg-icons";
 import Container from "@material-ui/core/Container";
 import Search from "./components/Search";
 import MovieList from "./components/MovieList";
@@ -10,7 +7,6 @@ import FavoriteList from "./components/FavoriteList";
 import "./App.css";
 
 const App = () => {
-  library.add(fab, faHeart, faCoffee);
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
   const [favorites, setFavorites] = useState([]);

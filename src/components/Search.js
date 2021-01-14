@@ -21,17 +21,15 @@ const Search = (props) => {
 
   return (
     <div className={classes.div}>
-      <form className={classes.form} noValidate autoComplete="off">
-        <TextField
-          id="outlined-basic"
-          label="Search Movies"
-          variant="outlined"
-          className="query"
-          value={props.query}
-          onChange={(e) => props.setQuery(e.target.value)}
-          placeholder="Search Movies"
-        />
-      </form>
+      <TextField
+        id="outlined-basic"
+        label="Search Movies"
+        variant="outlined"
+        className={classes.form}
+        value={props.query}
+        onChange={(e) => props.setQuery(e.target.value)}
+        placeholder="Search Movies"
+      />
     </div>
   );
 };
