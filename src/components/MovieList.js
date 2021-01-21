@@ -5,6 +5,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,7 +55,8 @@ const MovieList = (props) => {
                   aria-label={`star ${movie.Title}`}
                   onClick={() => props.addFavorite(movie)}
                 >
-                  <StarBorderIcon className={classes.title} />
+                  <ThumbUpIcon className={classes.title} />
+                  {/* <StarBorderIcon className={classes.title} /> */}
                 </IconButton>
               }
             />

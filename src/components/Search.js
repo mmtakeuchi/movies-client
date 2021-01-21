@@ -7,11 +7,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    color: "secondary",
   },
   form: {
     "& > *": {
       margin: theme.spacing(1),
       width: "50ch",
+      color: "primary",
     },
   },
 }));
