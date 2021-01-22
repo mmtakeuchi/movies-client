@@ -3,7 +3,6 @@ import axios from "axios";
 import Container from "@material-ui/core/Container";
 import Search from "./components/Search";
 import MovieList from "./components/MovieList";
-import FavoriteList from "./components/FavoriteList";
 import "./App.css";
 
 const App = () => {
@@ -55,16 +54,18 @@ const App = () => {
     <div>
       <Container maxWidth="lg">
         <Search query={query} setQuery={setQuery} />
-        <p>Movies Found: {movies.length}</p>
+
         <MovieList
           movies={movies}
-          addFavorite={addFavorite}
+          favorite={addFavorite}
           isLiked={isLiked}
+          icon="ThumbUp"
         />
-        <FavoriteList
-          favorites={favorites}
-          removeFavorite={removeFavorite}
+        <MovieList
+          movies={favorites}
+          favorite={removeFavorite}
           isLiked={isLiked}
+          icon="ThumbDown"
         />
       </Container>
     </div>
