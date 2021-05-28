@@ -45,9 +45,8 @@ const App = () => {
     setFavorites(newFavorites);
   };
 
-  const isLiked = (like) => {
-    like = !like;
-    setLike(like);
+  const isLiked = () => {
+    setLike(!like);
   };
 
   return (

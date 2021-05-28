@@ -14,24 +14,22 @@
   display: none;
 }
 
+poster:before, poster:after {
+  display: block;
+  background-color: red;
+  position: absolute;
+}
+
 .poster {
-  object-fit: contain;
-  width: 100%;
-  max-height: 100vh;
-  margin-right: 5px;
-  transition: transform 450ms;
+  object-fit: fill;
+  max-height: 90vh;
+  margin: 10px;
+  transition: 450ms;
 }
 
 .poster:hover {
-  transform: scale(1.1);
-}
-
-.posterLarge {
-  max-height: 250px;
-}
-
-.posterLarge:hover {
-  transform: scale(1.1);
+  box-shadow: -7px 7px #2192fc;
+  transform:translate(5px,-5px);
 }
 
 button {
